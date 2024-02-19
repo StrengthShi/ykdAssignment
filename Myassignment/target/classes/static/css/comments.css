@@ -1,0 +1,242 @@
+.comments-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 708px;
+    height: 588px;
+    background: #FFFFFF;
+    border-radius: 0;
+    opacity: 1;
+    z-index: 1100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.comments-close-button {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0);
+    opacity: 1;
+    position: absolute;
+    right: -50px;
+    color: #FFFFFF;
+    border: none;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.comments-close-button::before {
+    content: "✕";
+}
+
+
+
+.comments-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    /*display: block;*/
+}
+
+.time-sort-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 110px;
+    height: 22px;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #888FA2;
+    line-height: 22px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.time-sort-icon {
+    position: absolute;
+    top: 22px;
+    right: 122px;
+    width: 12px;
+    height: 15px;
+    background: #888FA2;
+    opacity: 1;
+}
+
+.comments-count {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 71px;
+    height: 22px;
+    font-size: 16px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height: 22px;
+}
+
+.comments-container {
+    position: absolute;
+    top: 64px;
+    overflow-y: auto;
+    height: 524px;
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    z-index: 1000;
+}
+
+.comments-container::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    border-top: 1px solid #F1F1F1; /* 上边框 */
+    width: 708px;
+    margin-bottom: 40px;
+}
+
+
+.comment-avatar {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-left:  20px;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.comment-nickname {
+    height: 22px;
+    font-size: 14px;
+    font-family: "PingFang SC", sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height: 22px;
+    margin-top: 2px;
+    margin-left: 8px;
+}
+
+.comment-content {
+    flex: 1;
+    margin-top: 30px;
+    margin-left: -60px;
+    max-width: 609px;
+    font-size: 14px;
+    font-family: "PingFang SC", sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height: 22px;
+}
+
+.comment-image {
+    width: 78px;
+    height: 111px;
+    border-radius: 0;
+    opacity: 1;
+    margin-top: 60px;
+    margin-left: -608px
+}
+
+.input-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: #FAFAFA;
+    box-shadow: 0px -1px 0px 1px #E5E5E5;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+    z-index: 1100;
+}
+
+.input-field {
+    position: absolute;
+    left: 34px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 76%;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    opacity: 1;
+    border: 1px solid #D3D3D3;
+    padding: 0 12px; /* 添加内边距，输入框内容与边框有间隔 */
+}
+
+.publish-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 36px;
+    background: #0084FF;
+    border-radius: 2px;
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+.input-icon {
+    position: absolute;
+    right: 121px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39px;
+    height: 16px;
+    background: #888FA2;
+    opacity: 1;
+}
+
+.comment-time {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 600px;
+    width: 43px;
+    height: 22px;
+    font-size: 14px;
+    font-family: 'PingFang SC', 'PingFang SC';
+    font-weight: normal;
+    color: #888FA2;
+    line-height: 22px;
+}
+
+.comment-like-icon {
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 60px;
+    width: 30px;
+    height: 17px;
+    background: #888FA2;
+    opacity: 1;
+}
+
+.comment-image-like-icon {
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 180px;
+    width: 30px;
+    height: 17px;
+    background: #888FA2;
+    opacity: 1;
+}

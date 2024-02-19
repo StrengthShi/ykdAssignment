@@ -1,0 +1,360 @@
+.post-container {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.post-content {
+    width: 684px;
+    height: 231px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    opacity: 1;
+    margin-left: 220px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.post-content-no-video {
+    width: 682px;
+    height: 168px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    opacity: 1;
+    margin-left: 220px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.post-content-new {
+    width: 684px;
+    height: 655px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    opacity: 1;
+    margin-left: 220px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.post-content-no-video-new {
+    width: 682px;
+    height: 500px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    opacity: 1;
+    margin-left: 220px;
+    margin-top: 10px;
+    position: relative;
+}
+
+
+
+.post-title {
+    width: 432px;
+    height: 22px;
+    font-size: 16px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #1C1C1C;
+    line-height: 22px;
+    margin-left: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-title:hover {
+    color: #285094 ;
+}
+
+.video-block {
+    position: absolute;
+    left: 18px;
+    top: 54px;
+    width: 190px;
+    height: 105px;
+    background: #F9F9F9;
+    border-radius: 0px;
+    opacity: 1;
+}
+
+.video-block-new {
+    position: absolute;
+    left: 36%;
+    top: 104px;
+    width: 190px;
+    height: 105px;
+    background: #F9F9F9;
+    border-radius: 0px;
+    opacity: 1;
+}
+
+.post-content-text {
+    position: absolute;
+    left: 224px;
+    top: 58px;
+    width: 433px;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #1C1C1C;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 22px;
+}
+
+.post-content-no-video-text {
+    position: absolute;
+    left: 15px;
+    top: 44px;
+    width: 645px;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #1C1C1C;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 22px;
+}
+
+.post-content-text-new {
+    position: absolute;
+    left: 15px;
+    top: 206px;
+    width: 645px;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #1C1C1C;
+    line-height: 22px;
+}
+
+
+.post-content-no-video-text-new {
+    position: absolute;
+    left: 15px;
+    top: 106px;
+    width: 645px;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #1C1C1C;
+    line-height: 22px;
+}
+
+.post-content-no-video-text-new {
+    white-space: pre-wrap;
+}
+
+.post-content-text-new {
+    white-space: pre-wrap;
+}
+
+.post-content-no-video-text {
+    white-space: pre-wrap;
+}
+
+.post-content-text {
+    white-space: pre-wrap;
+}
+
+.expand-button {
+    width: 74px;
+    height: 22px;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #005DB5;
+    line-height: 22px;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 0;
+    position: absolute;
+}
+
+
+.post-content-new .expand-button {
+    right: 46px;
+    bottom: 24px;
+    position: absolute;
+}
+
+.post-content-no-video-new .expand-button {
+    right: 46px;
+    bottom: 24px;
+    position: absolute;
+}
+
+.post-content .expand-button {
+    top: 135px;
+    left: 600px;
+}
+
+.post-content-no-video .expand-button {
+    top: 110px;
+    left: 600px;
+}
+
+
+
+.post-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.like-button {
+    width: 91px;
+    height: 30px;
+    background: #DCE6F7;
+    border-radius: 2px 2px 0px 2px;
+    opacity: 1;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    font-size: 14px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: normal;
+    color: #426BED;
+    /*color: #E8EFFC;*/
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.not-like-button {
+    width: 33px;
+    height: 30px;
+    background: #E8EFFC;
+    border-radius: 2px 2px 0px 2px;
+    opacity: 1;
+    border-radius: 2px 2px 0px 2px;
+    opacity: 1;
+    position: absolute;
+    bottom: 20px;
+    left: 107px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.not-like-button img {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    width: 13px;
+    height: 12px;
+    background: #426BED;
+    opacity: 1;
+}
+
+.like-button img {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    width: 13px;
+    height: 12px;
+    background: #426BED;
+    opacity: 1;
+}
+
+.like-button span {
+    position: absolute;
+    left: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*.like-button:hover {*/
+/*    background-color: #cfd8dc;*/
+/*}*/
+
+.comment-icon {
+    position: absolute;
+    left: 164px;
+    bottom: 30px;
+    width: 15px;
+    height: 15px;
+    background: #888FA2;
+    opacity: 1;
+}
+
+#comment-count-button {
+    position: absolute;
+    left: 180px;
+    bottom: 24px;
+    width: 76px;
+    height: 22px;
+    font-size: 14px;
+    font-family: PingFang SC, sans-serif;
+    font-weight: normal;
+    color: #788399;
+    line-height: 22px;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 0;
+    opacity: 1;
+    position: absolute;
+    left: 15px;
+    top: 59px;
+}
+
+.nickname {
+    height: 22px;
+    font-size: 14px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: normal;
+    color: #1C1C1C;
+    line-height: 22px;
+    position: absolute;
+    left: 45px;
+    top: 59px;
+}
+
+.post-time {
+    position: absolute;
+    bottom: 70px;
+    left: 15px;
+    height: 22px;
+    font-size: 14px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: normal;
+    color: #8790A4;
+    line-height: 22px;
+}
+
+.post-content-time {
+    position: absolute;
+    left: 257px;
+    bottom: 22px;
+    height: 22px;
+    font-size: 14px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: normal;
+    color: #888FA2;
+    line-height: 22px;
+}
+
+.post-another-images {
+    position: absolute;
+    left: 269px;
+    bottom: 29px;
+    height: 14px;
+    background: #888FA2;
+    opacity: 1;
+}

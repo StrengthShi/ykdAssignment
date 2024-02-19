@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhihu.myassignment.mapper.CommentMapper">
+
+    <resultMap id="commentResultMap" type="com.zhihu.myassignment.model.Comment">
+        <id column="comment_id" property="commentId"/>
+        <result column="post_id" property="postId"/>
+        <result column="commenter_name" property="commenterName"/>
+        <result column="comment_content" property="commentContent"/>
+        <result column="comment_image_url" property="commentImageUrl"/>
+        <result column="comment_time" property="commentTime"/>
+    </resultMap>
+
+    <!-- 根据帖子ID获取评论 -->
+    <select id="getCommentsByPostId" parameterType="com.zhihu.myassignment.model.Comment" resultMap="commentResultMap">
+        SELECT * FROM comments WHERE post_id = #{postId}
+    </select>
+
+
+    <!-- 获取所有评论 -->
+    <select id="getAllComments" resultMap="commentResultMap">
+        SELECT * FROM comments;
+    </select>
+
+    <!-- 根据评论 ID 获取评论详情 -->
+    <select id="getCommentById" parameterType="Long" resultMap="commentResultMap">
+        SELECT * FROM comments WHERE comment_id = #{commentId};
+    </select>
+
+    <!-- 添加评论 -->
+    <insert id="addComment" parameterType="com.zhihu.myassignment.model.Comment">
+        INSERT INTO comments (post_id, commenter_name, comment_content, comment_image_url, comment_time)
+        VALUES (#{postId}, #{commenterName}, #{commentContent}, #{commentImageUrl}, #{commentTime});
+    </insert>
+
+    <!-- 更新评论 -->
+    <update id="updateComment" parameterType="com.zhihu.myassignment.model.Comment">
+        UPDATE comments SET
+                            post_id = #{postId},
+                            commenter_name = #{commenterName},
+                            comment_content = #{commentContent},
+                            comment_image_url = #{commentImageUrl},
+                            comment_time = #{commentTime}
+        WHERE comment_id = #{commentId};
+    </update>
+
+    <!-- 删除评论 -->
+    <delete id="deleteComment" parameterType="Long">
+        DELETE FROM comments WHERE comment_id = #{commentId};
+    </delete>
+
+</mapper>

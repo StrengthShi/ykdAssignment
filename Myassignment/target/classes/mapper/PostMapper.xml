@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhihu.myassignment.mapper.PostMapper">
+
+<!--    <resultMap id="postResultMap" type="com.zhihu.myassignment.model.Post">-->
+<!--        <id column="post_id" property="postId"/>-->
+<!--        <result column="title" property="title"/>-->
+<!--        <result column="content" property="content"/>-->
+<!--        <result column="video_url" property="videoUrl"/>-->
+<!--        <result column="likes_count" property="likesCount"/>-->
+<!--        <result column="post_time" property="postTime"/>-->
+<!--    </resultMap>-->
+
+    <resultMap id="postResultMap" type="com.zhihu.myassignment.model.Post">
+        <id column="post_id" property="postId"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="video_url" property="videoUrl"/>
+        <result column="likes_count" property="likesCount"/>
+        <result column="post_time" property="postTime"/>
+        <result column="poster_nickname" property="nickName"/>
+    </resultMap>
+    <!-- 获取所有帖子 -->
+    <select id="getAllPosts" resultMap="postResultMap">
+        SELECT * FROM posts;
+    </select>
+
+    <!-- 根据帖子 ID 获取帖子详情 -->
+    <select id="getPostById" parameterType="Long" resultMap="postResultMap">
+        SELECT * FROM posts WHERE post_id = #{postId};
+    </select>
+
+    <!-- 添加帖子 -->
+    <insert id="addPost" parameterType="com.zhihu.myassignment.model.Post">
+        INSERT INTO posts (title, content, video_url, likes_count, post_time)
+        VALUES (#{title}, #{content}, #{videoUrl}, #{likesCount}, #{postTime});
+    </insert>
+
+    <!-- 更新帖子信息 -->
+    <update id="updatePost" parameterType="com.zhihu.myassignment.model.Post">
+        UPDATE posts SET
+                         title = #{title},
+                         content = #{content},
+                         video_url = #{videoUrl},
+                         likes_count = #{likesCount},
+                         post_time = #{postTime}
+        WHERE post_id = #{postId};
+    </update>
+
+    <!-- 删除帖子 -->
+    <delete id="deletePost" parameterType="Long">
+        DELETE FROM posts WHERE post_id = #{postId};
+    </delete>
+
+    <!--获得点赞数-->
+    <select id="getLikesCount" resultType="int" parameterType="com.zhihu.myassignment.model.Post">
+        SELECT likes_count
+        FROM posts
+        WHERE post_id = #{postId}
+    </select>
+
+    <!-- 根据帖子ID获取评论数量 -->
+    <select id="getCommentCount" parameterType="com.zhihu.myassignment.model.Post" resultType="int">
+        SELECT COUNT(*) FROM comments WHERE post_id = #{postId}
+    </select>
+</mapper>

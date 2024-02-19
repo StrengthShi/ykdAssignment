@@ -1,0 +1,130 @@
+.custom-input {
+    width: 424px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #D8D8D8;
+    outline: none;
+}
+
+.custom-input:focus {
+    border-bottom: 1px solid #0084FF;
+}
+
+.custom-close-button {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0);
+    opacity: 1;
+    position: absolute;
+    top: -13px;
+    right: -50px;
+    color: #FFFFFF;
+    border: none;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.custom-close-button::before {
+    content: "✕";
+}
+
+.custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.custom-login-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 444px;
+    height: 442px;
+    background: #fff;
+    padding: 20px;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+}
+
+.custom-password-login-text {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.custom-login-content {
+    margin-bottom: 20px;
+}
+
+.custom-line {
+    width: 77px;
+    height: 4px;
+    background: #0084FF;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+    margin-bottom: 16px;
+}
+
+.custom-username-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 52px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.custom-password-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.custom-login-submit-button {
+    position: absolute;
+    top: 278px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 384px;
+    height: 52px;
+    background:  #0084FF;
+    border-radius: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.custom-login-submit-button span {
+    width: 81px;
+    height: 22px;
+    font-size: 18px;
+    font-family: 'PingFang SC', 'PingFang SC';
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 22px;
+}
+
+#additional-text {
+    width: 365px;
+    height: 44px;
+    font-size: 14px;
+    font-family: 'PingFang SC', 'PingFang SC';
+    font-weight: normal;
+    color: #9E9E9E;
+    line-height: 22px;
+    margin-top: 110px;
+    margin-left: 30px;
+}

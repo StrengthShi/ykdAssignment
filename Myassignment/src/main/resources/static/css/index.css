@@ -1,0 +1,430 @@
+html, body {
+    width: 1440px;
+    height: 1220px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/*第一区域*/
+#first-area {
+    width: 1440px;
+    height: 54px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+    border: 1px solid #EEEEEE;
+    position: relative;
+    z-index: 1000;
+}
+
+#zhihu-image {
+    width: 64px;
+    height: 30px;
+    position: absolute;
+    left: 120px;
+    top: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#home-block,
+#member-block,
+#discover-block,
+#answer-block {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    width: 30px;
+    height: 22px;
+    font-size: 15px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: normal;
+    color: #8892A6;
+    line-height: 22px;
+}
+
+#home-block:hover,
+#member-block:hover,
+#discover-block:hover,
+#answer-block:hover {
+    font-weight: bold;
+    color: black;
+}
+
+#home-block:visited,
+#member-block:visited,
+#discover-block:visited,
+#answer-block:visited {
+    color: #8892A6;
+}
+
+#home-block:active,
+#member-block:active,
+#discover-block:active,
+#answer-block:active {
+
+}
+
+#home-block {
+    left: 234px;
+}
+
+#member-block {
+    left: 300px;
+}
+
+#discover-block {
+    left: 366px;
+}
+
+#answer-block {
+    width:60px;
+    left: 432px;
+}
+
+#search-bar {
+    position: absolute;
+    left: 573px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    flex: 1;
+    width:436px;
+    height: 16px;
+    background: #F6F6F6;
+    border-radius: 100px 0 0 100px;
+    opacity: 1;
+    border: 1px solid #EBEBEB;
+    padding: 8px;
+    margin-right: 0;
+}
+
+#search-btn {
+    width: 46px;
+    height: 34px;
+    background: #0084FF;
+    opacity: 1;
+    border-radius: 0px 100px 100px 0px;
+    cursor: pointer;
+}
+
+#search-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+#dropdown {
+    position: fixed;
+    top: 44px; /* 距离搜索栏底部的距离 */
+    width: 482px;
+    height: 266px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    border-radius: 4px 4px 4px 4px;
+    opacity: 1;
+    border: 1px solid #E1E1E1;
+    display: none; /* 初始状态下隐藏 */
+    z-index: 1000;
+}
+
+.dropdown-item {
+    width: 482px;
+    height: 34px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+}
+
+.dropdown-item:hover {
+    background-color: #E0E0E0;
+}
+
+
+#additional-image {
+    position: absolute;
+    left: 1153px;
+    top: 50%;
+    transform: translate(-50%, -50%); /* 将元素的左上角移动到其宽度和高度的一半处，实现水平和垂直居中 */
+    width: 69px;
+    height: 19px;
+    background: #858FA6;
+    opacity: 1;
+}
+
+#login-button {
+    position: absolute;
+    left: 1254px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 66px;
+    height: 34px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    opacity: 1;
+    border: 1px solid #0084FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-text {
+    width: 32px;
+    height: 22px;
+    font-size: 16px;
+    font-family: 'PingFang SC', 'PingFang SC';
+    font-weight: normal;
+    color: #0084FF;
+    line-height: 22px;
+}
+/*第一区域*/
+
+/*第二区域*/
+#second-area {
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.user-block {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    position: relative;
+}
+.user-block:hover {
+    font-weight: bold;
+    position: relative;
+}
+
+.user-block:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid blue;
+}
+
+.comprehensive-block:hover::after,
+.option-block:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid blue;
+}
+
+.comprehensive-block,
+.option-block {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    position: relative;
+}
+
+.comprehensive-block {
+    margin-left: 234px;
+}
+
+
+.comprehensive-block:hover,
+.option-block:hover {
+    font-weight: bold;
+    /*text-decoration: underline;*/
+}
+
+
+#filter-icon {
+    width: 14px;
+    height: 14px;
+    background: #8892A6;
+    opacity: 1;
+    position: absolute;
+    left: 851px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#filter-icon:hover {
+    background: #556677;
+}
+
+#filter-text {
+    width: 30px;
+    height: 22px;
+    font-size: 15px;
+    font-family: 'PingFang SC', 'PingFang SC';
+    font-weight: normal;
+    color: #8892A6;
+    line-height: 22px;
+    position: absolute;
+    left: 872px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#filter-text:hover {
+    color: #556677;
+}
+/*第二区域*/
+
+/*第三区域*/
+
+#third-area {
+    background: #F6F6F6;
+    z-index: 1;
+}
+
+#user-image-container {
+    display: none;
+    position: absolute;
+    top: 293px;
+    left: 439px;
+    width: 258px;
+    height: 210px;
+    border-radius: 0px;
+    opacity: 1;
+}
+
+#user-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+}
+
+.hot-search {
+    top:119px;
+    position: absolute;
+    /*top:12px;*/
+    left: 914px;
+    width: 306px;
+    height: 357px;
+    background: #FFFFFF;
+    border-radius: 2px 2px 2px 2px;
+    opacity: 1;
+}
+
+.search-discovery {
+    width: 64px;
+    height: 22px;
+    font-size: 16px;
+    font-family: 'PingFang SC', 'PingFang SC';
+    font-weight: normal;
+    color: #1C1C1C;
+    line-height: 22px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.line {
+    width: 306px;
+    height: 1px;
+    background: #F3F3F3;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+    position: absolute;
+    top: 52px;
+}
+
+
+.hot-search-list {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+}
+
+.hot-search-item {
+    height: 22px;
+    font-size: 14px;
+    font-family: 'PingFang SC', 'PingFang SC';
+    font-weight: normal;
+    color: #1C1C1C;
+    line-height: 22px;
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.hot-search-icon {
+    width: 10px;
+    height: 14px;
+    background: #D45040;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -7px;
+}
+
+.zhihu-info-image {
+    top:497px;
+    left: 914px;
+    width: 267px;
+    height: 539px;
+    position: absolute;
+    /*top: 390px;*/
+}
+
+#not-found-image {
+    width: 258px;
+    height: 210px;
+    border-radius: 0;
+    opacity: 1;
+    position: absolute;
+    top: 293px;
+    left: 439px;
+    display: none;
+}
+
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    /*background: #FFFFFF;*/
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    opacity: 1;
+    cursor: pointer;
+    display: none;
+}
+
+#scroll-to-top img {
+    width: 100%;
+    height: 100%;
+}
+
+/*第三区域*/
+
+/*第四区域已弃用*/
+/*#forth-area {*/
+/*    flex: 1;*/
+/*    width: 526px;*/
+/*    z-index: 1;*/
+/*    left: 914px;*/
+/*    position: absolute;*/
+/*}*/
+
+
+
+

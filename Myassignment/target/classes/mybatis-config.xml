@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
+    <!-- 注册别名 -->
+    <typeAliases>
+        <package name="com.zhihu.myassignment.model"/>
+    </typeAliases>
+
+    <!-- 映射器配置 -->
+    <mappers>
+        <mapper resource="mapper/PostMapper.xml"/>
+        <mapper resource="mapper/CommentMapper.xml"/>
+
+    </mappers>
+</configuration>
