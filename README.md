@@ -3,7 +3,7 @@
 仿知乎页面（仅实现部分功能，从数据库里爬取帖子和评论），使用springboot和mybaits
 
 #### 安装教程
-输入git clone https://gitee.com/strugglers-who-dare-not-be-bad/imitation-zhihu-page.git
+输入git clone [https://gitee.com/strugglers-who-dare-not-be-bad/imitation-zhihu-page.git]||(https://github.com/StrengthShi/ykdAssignment.git)
 #### 使用说明
 
 1.  登录按钮点击事件
